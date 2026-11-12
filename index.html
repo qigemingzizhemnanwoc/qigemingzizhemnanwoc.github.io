@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>化旧成花海 — OpsLattice</title>
-  <meta name="description" content="化旧成花海的作品页：OpsLattice 企业运营管理系统的二次开发与工程化。">
+  <meta name="description" content="化旧成花海的作品页：OpsLattice 企业运营管理系统的二次开发、工程化与数据 Agent。">
   <meta name="theme-color" content="#F7F5F0">
   <meta name="color-scheme" content="light">
   <meta property="og:title" content="化旧成花海 — OpsLattice">
-  <meta property="og:description" content="企业运营管理系统的二次开发与工程化。">
+  <meta property="og:description" content="企业运营管理系统的二次开发、工程化与数据 Agent。">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -34,12 +34,12 @@
           <p class="hero-year" aria-hidden="true">2026</p>
         </div>
         <h1 id="hero-title">OpsLattice<span class="dot" aria-hidden="true"></span></h1>
-        <p class="lede">企业运营管理系统的<br>二次开发与工程化</p>
+        <p class="lede">企业运营管理系统的<br>二次开发、工程化与数据 Agent</p>
 
         <dl class="facts">
           <div class="fact fact--stack">
             <dt>技术栈</dt>
-            <dd>Java 17 · Spring Boot 3 · MyBatis-Plus · MySQL 8 · Redis · Vue 3 · Docker Compose</dd>
+            <dd>Java 17 · Spring Boot 3 · Spring AI · DeepSeek · MyBatis-Plus · MySQL 8 · Redis · Vue 3 · Docker Compose</dd>
           </div>
           <div class="fact">
             <dt>角色</dt>
@@ -65,7 +65,7 @@
             <p class="case-meta">企业运营管理系统<br>Java / Spring Boot / Vue 3<br>2026</p>
           </div>
           <div class="case-copy">
-            <p class="intro">OpsLattice 覆盖人员、采购、销售、退货与库存。我在原作者 <a class="inline-link" href="https://github.com/shanqiu127/Collaborative-Operation-Management-System" target="_blank" rel="noopener noreferrer">shanqiu127</a> 的项目上做了四项改造，重点完善并发一致性、员工接口、防重复提交和容器化部署。</p>
+            <p class="intro">OpsLattice 覆盖人员、采购、销售、退货与库存。我在原作者 <a class="inline-link" href="https://github.com/shanqiu127/Collaborative-Operation-Management-System" target="_blank" rel="noopener noreferrer">shanqiu127</a> 的项目上持续做二次开发，完善并发一致性、员工接口、防重复提交和容器化部署，并新增 Spring AI + DeepSeek 数据 Agent，让用户在现有权限内用自然语言查询库存与销售。</p>
           </div>
         </div>
 
@@ -98,7 +98,23 @@
               <p>四服务 Compose，健康依赖与持久化卷，GitHub Actions 构建测试。</p>
             </div>
           </li>
+          <li>
+            <span class="work-num">05</span>
+            <div>
+              <h3>只读数据 Agent</h3>
+              <p>Spring AI + DeepSeek，由模型自主选择库存不足、库存明细、按商品销售、销售概览四类工具；复用现有业务权限，只查询、不修改业务数据。</p>
+            </div>
+          </li>
+          <li>
+            <span class="work-num">06</span>
+            <div>
+              <h3>多轮上下文与调用追溯</h3>
+              <p>从“哪些商品库存不足”追问“这些商品卖得怎么样”，复用成功库存查询中的商品 ID。记录工具参数、行数、耗时与成功状态，失败查询不进入商品上下文。</p>
+            </div>
+          </li>
         </ol>
+        <p>数据 Agent 与原有项目知识问答并行：一个查库存与销售，一个回答流程与规则。完整体验需本地配置模型密钥。</p>
+        <p><a class="inline-link" href="https://github.com/qigemingzizhemnanwoc/OpsLattice/blob/main/docs/verification/agent-acceptance.md" target="_blank" rel="noopener noreferrer">查看 Agent 验收记录：两轮真实模型调用、工具轨迹与 SQL 对账 ↗</a></p>
 
         <div class="evidence">
           <figure class="diagram" id="architecture">
@@ -179,15 +195,15 @@
                 <text class="sn" x="265" y="233">SET NX + TTL</text>
               </g>
             </svg>
-            <figcaption>系统架构 · 浏览器到数据层的调用路径</figcaption>
+            <figcaption>业务基础架构 · 浏览器到数据层的调用路径；Agent 通过 Spring AI 调用 DeepSeek，经权限校验查询业务数据</figcaption>
           </figure>
 
           <div class="proof" id="metrics" role="group" aria-label="项目指标">
             <p class="proof-kicker">验证</p>
-            <p class="proof-num">44</p>
-            <p class="proof-label">项测试通过<br><strong>0 失败</strong></p>
+            <p class="proof-num">76</p>
+            <p class="proof-label">项 JUnit 测试通过<br><strong>2026-11-11 验收记录</strong></p>
             <div class="proof-facts">
-              <div><span>核心改造</span><span>4 项</span></div>
+              <div><span>Agent 测试</span><span>32 项 / 5 类</span></div>
               <div><span>容器服务</span><span>4 个</span></div>
             </div>
           </div>

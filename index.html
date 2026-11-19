@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>化旧成花海 — OpsLattice</title>
-  <meta name="description" content="化旧成花海的作品页：OpsLattice 企业运营管理系统的二次开发、工程化与数据 Agent。">
+  <title>化旧成花海 — 项目作品集</title>
+  <meta name="description" content="化旧成花海的项目作品集：小说管理 Agent 的混合检索、引用校验与限定范围创作，以及 OpsLattice 企业运营管理系统。">
   <meta name="theme-color" content="#F7F5F0">
   <meta name="color-scheme" content="light">
-  <meta property="og:title" content="化旧成花海 — OpsLattice">
-  <meta property="og:description" content="企业运营管理系统的二次开发、工程化与数据 Agent。">
+  <meta property="og:title" content="化旧成花海 — 项目作品集">
+  <meta property="og:description" content="小说管理 Agent · 混合检索与可追溯问答；OpsLattice · 企业运营与数据 Agent。">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -29,27 +29,42 @@
   <main id="main" tabindex="-1">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="wrap">
-        <div class="hero-top">
-          <p class="eyebrow">企业运营管理系统 · 二次开发</p>
-          <p class="hero-year" aria-hidden="true">2026</p>
-        </div>
-        <h1 id="hero-title">OpsLattice<span class="dot" aria-hidden="true"></span></h1>
-        <p class="lede">企业运营管理系统的<br>二次开发、工程化与数据 Agent</p>
+        <h1 id="hero-title" style="font-size:clamp(2.8rem,8vw,6rem);line-height:1.12;letter-spacing:-.04em">让 AI 走进<br>具体的问题。</h1>
+        <p class="lede">从长篇小说的原文检索与创作辅助，<br>到企业运营中的业务查询与工程实践。</p>
+        <nav aria-label="项目导航" style="display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem">
+          <a class="inline-link" href="#novel">小说管理 Agent</a>
+          <a class="inline-link" href="#case">OpsLattice</a>
+        </nav>
+      </div>
+    </section>
 
-        <dl class="facts">
-          <div class="fact fact--stack">
-            <dt>技术栈</dt>
-            <dd>Java 17 · Spring Boot 3 · Spring AI · DeepSeek · MyBatis-Plus · MySQL 8 · Redis · Vue 3 · Docker Compose</dd>
+    <section class="case" id="novel" aria-labelledby="novel-title" style="border-bottom:1px solid var(--ink);scroll-margin-top:80px">
+      <div class="wrap">
+        <div class="case-head">
+          <div class="case-side">
+            <h2 id="novel-title" style="line-height:1.2">小说管理 Agent</h2>
+            <p style="margin:0">本地阅读与写作助手<br>Python · JavaScript · DeepSeek<br>关键词 / 向量混合检索</p>
           </div>
-          <div class="fact">
-            <dt>角色</dt>
-            <dd>二次开发</dd>
+          <div class="case-copy">
+            <p class="intro">长篇阅读中，人物关系与情节细节散落在数十万字的原文里。这个项目把作品导入、阅读、带引用问答、人物资料和创作候选稿放进同一个工作台：让回答能回到原文核对，让创作以允许阅读的范围为依据。</p>
           </div>
-          <div class="fact">
-            <dt>仓库</dt>
-            <dd><a class="fact-link" href="https://github.com/qigemingzizhemnanwoc/OpsLattice" target="_blank" rel="noopener noreferrer">OpsLattice <span aria-hidden="true">↗</span></a></dd>
-          </div>
-        </dl>
+        </div>
+        <div style="max-width:75ch">
+          <h3>从问题到原文，再到回答</h3>
+          <p>支持文本、Markdown、Word 和文本型 PDF。原文切块后，分别进行关键词与向量排序，通过 RRF 融合候选，去重并补充邻近原文，再交给 DeepSeek 生成回答。索引未就绪或向量服务故障时回退关键词检索。</p>
+          <h3>引用可追溯，疑点可核对</h3>
+          <p>保留模型回答，并对引用文字、明确整数和已有角色卡姓名做规则核对；疑点在页面标黄，提供折叠明细。校验用于辅助审阅，不等同于语义正确性判定。</p>
+          <h3>阅读进度也是创作边界</h3>
+          <p>人物提取和限定范围创作不复用全书向量索引，避免把未授权后文带入提示词。灵感与续写提示词可保存复用，候选稿独立保存，保留作品原文。</p>
+          <h3>用真实作品检验检索效果</h3>
+          <p>在一部约 44.5 万字、372 个片段的作品上，以固定 50 道题评测直接命中前 5 条的 recall@5：纯词频基线 <strong>31/50</strong>，现有关键词检索 <strong>32/50</strong>，混合检索实际入口 <strong>37/50</strong>。相较现有关键词检索净增 5 题。</p>
+          <p>这是单部作品的检索评测，不代表最终回答准确率。扩展邻居窗口未增加证据覆盖；增加返回数和加入前文前缀的实验也未通过既定验收，保留失败记录作为后续改进依据。</p>
+          <details>
+            <summary style="cursor:pointer;text-decoration:underline;text-underline-offset:4px">实现与使用边界</summary>
+            <p>Python 标准库 HTTP 服务与原生浏览器界面，本地单用户运行。远程 embedding 会发送作品片段，对话模型会接收检索原文与必要上下文，因此并非完全离线。扫描件 OCR 不在当前支持范围，完整浏览器到模型回答的人工验收尚未完成。</p>
+            <p>评测依据：项目 README.md、eval/report.json 与 T2 / T3 实验记录；功能依据：app.py、workspace.py、verify.py。此处展示项目能力与评测摘要，不提供在线模型体验。</p>
+          </details>
+        </div>
       </div>
     </section>
 

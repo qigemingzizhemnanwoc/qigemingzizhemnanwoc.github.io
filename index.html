@@ -1,238 +1,47 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>化旧成花海 — 项目作品集</title>
-  <meta name="description" content="化旧成花海的项目作品集：小说管理 Agent 的混合检索、引用校验与限定范围创作，以及 OpsLattice 企业运营管理系统。">
-  <meta name="theme-color" content="#F7F5F0">
-  <meta name="color-scheme" content="light">
-  <meta property="og:title" content="化旧成花海 — 项目作品集">
-  <meta property="og:description" content="小说管理 Agent · 混合检索与可追溯问答；OpsLattice · 企业运营与数据 Agent。">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化旧成花海 · AI 应用与 Agent 开发作品集</title>
+<meta name="description" content="小说管理 Agent 与 OpsLattice 数据 Agent：混合检索、引用校验、工具调用、多轮上下文和工程验证。化旧成花海的开发作品集。">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="化旧成花海 · 开发作品集"><meta property="og:description" content="小说管理 Agent / OpsLattice 数据 Agent"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light;--ink:#191919;--muted:#595f5b;--line:#d2d5d2;--green:#29634b;--mono:Consolas,"SFMono-Regular",monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;color:var(--ink);background:#fff;font:16px/1.8 "Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}a{color:inherit;text-underline-offset:5px;text-decoration-thickness:1px}a:hover{color:var(--green)}a:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:5px}::selection{background:#dceae1;color:#183e2d}.skip{position:fixed;top:-100px;left:16px;background:#fff;padding:8px 16px;z-index:10}.skip:focus{top:8px}.sidebar{position:fixed;inset:0 auto 0 0;width:240px;border-right:1px solid var(--line);padding:32px 26px;display:flex;flex-direction:column;background:#fff}.name{font-size:25px;line-height:1.3;letter-spacing:-.04em;font-weight:800;text-decoration:none;white-space:nowrap}.role{margin:18px 0 26px;line-height:1.6}.directory{border-top:1px solid var(--line);padding-top:26px}.directory p{margin:0 0 12px;font-weight:600}.directory a{display:block;text-decoration:none;padding:5px 0;overflow-wrap:anywhere}.folder{font-family:var(--mono);font-size:15px}.directory a[aria-current]{color:var(--green);font-weight:700}.tree{margin:4px 0 20px 6px;padding-left:19px;border-left:1px solid var(--line)}.tree a{font-size:14px;color:var(--muted)}.side-bottom{margin-top:auto;padding-top:32px}.side-bottom a{color:var(--green)}.side-bottom p{margin:10px 0 0;font:14px var(--mono);color:var(--muted)}main{margin-left:240px;padding:28px 48px 0;max-width:1440px}.breadcrumb{font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:38px}.project{padding-bottom:54px}.project+.project{border-top:4px solid var(--ink);padding-top:44px}h1,h2,h3,p,figure{margin:0}h1,h2{font-size:clamp(34px,4.2vw,64px);line-height:1.15;letter-spacing:-.035em;font-weight:800;text-wrap:balance}h2{font-size:clamp(30px,3.5vw,52px)}.subtitle{font-size:clamp(18px,1.7vw,25px);line-height:1.6;margin:16px 0 18px}.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--muted)}.stack{font-family:var(--mono);color:var(--ink)}.project-header{margin-bottom:28px}.figure-label{font-size:14px;margin-bottom:10px;font-weight:600}.workbench{border:1px solid #929993;display:grid;grid-template-columns:135px minmax(0,1.2fr) minmax(0,1fr);min-height:300px;font-size:14px;line-height:1.8}.bench-nav{padding:20px 15px;background:#fafbf9;border-right:1px solid var(--line)}.bench-nav strong{display:block;font-size:15px;margin-bottom:20px}.bench-nav span{display:block;margin:8px 0}.bench-nav .selected{color:var(--green);font-weight:600}.reading,.answer{padding:22px;min-width:0}.reading{border-right:1px solid var(--line)}.reading h3,.answer h3{font-size:16px;margin-bottom:20px}.reading p{margin-bottom:16px}.reading blockquote{margin:0;border-left:1px solid var(--green);padding-left:14px;color:#343b36}.answer .question{background:#f1f3f1;padding:10px 12px;margin-bottom:16px}.answer p{margin-bottom:14px}.citation{border-top:1px solid var(--line);padding-top:12px;color:var(--green)}figcaption,.note{color:var(--muted);font-size:14px;line-height:1.7}.note{margin-top:12px}figcaption{margin-top:10px}.record{display:grid;grid-template-columns:125px minmax(0,1fr);gap:24px;padding-top:26px;margin-top:26px;border-top:1px solid var(--line)}.record h3{font-size:19px;line-height:1.5}.record-body{border-left:1px solid var(--line);padding-left:24px}.record-body p+p{margin-top:14px}.record-body strong{font-weight:650}table{border-collapse:collapse;width:100%;font-size:16px}th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}th{background:#f1f3f1;font-weight:600}td:last-child,th:last-child{font-family:var(--mono)}details{margin-top:20px}summary{cursor:pointer;text-decoration:underline;text-underline-offset:5px;font-size:14px}details p{margin-top:12px;font-size:14px;color:var(--muted)}.ops-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;margin-top:30px}.narrative p{margin-bottom:24px}.trace{background:#f3f4f2;padding:20px;font:14px/1.75 var(--mono);overflow-wrap:anywhere}.trace h3{font:600 15px/1.6 "Segoe UI","Microsoft YaHei",sans-serif;margin-bottom:16px}.trace pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;margin:12px 0 20px}.trace .call{color:var(--green)}.trace p{font-family:"Segoe UI","Microsoft YaHei",sans-serif}.trace hr{border:0;border-top:1px solid var(--line);margin:20px 0}.project-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:24px}.project-links a{color:var(--green);font-size:14px}.about{padding:30px 0;border-top:1px solid var(--ink)}.about h2{font-size:23px;margin-bottom:14px}.about p{max-width:70ch}.footer{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}main:focus{outline:none}
+@media(min-width:1600px){main{margin-right:auto;padding-inline:64px}}
+@media(max-width:1100px){.sidebar{width:210px;padding:28px 20px}main{margin-left:210px;padding-inline:30px}.name{font-size:23px}.workbench{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.bench-nav{display:none}.record{grid-template-columns:100px minmax(0,1fr)}.ops-body{gap:24px}}
+@media(max-width:760px){html{scroll-padding-top:16px}.sidebar{position:static;width:auto;padding:20px;border-right:0;border-bottom:1px solid var(--ink);display:block}.name{font-size:23px}.role{margin:6px 0 14px;font-size:14px}.directory{padding:0;border:0;display:flex;gap:12px 22px;flex-wrap:wrap}.directory p,.tree,.side-bottom{display:none}.directory a{font-size:14px}.directory>a:last-child{margin-left:auto}main{margin:0;padding:20px 20px 0}.breadcrumb{margin-bottom:28px;padding-bottom:14px;font-size:13px}h1{font-size:36px}h2{font-size:31px}.subtitle{font-size:18px}.meta{gap:4px 12px}.workbench{grid-template-columns:1fr}.reading{border-right:0;border-bottom:1px solid var(--line)}.reading,.answer{padding:20px}.record{grid-template-columns:1fr;gap:12px;margin-top:22px;padding-top:22px}.record-body{padding-left:0;border:0}.ops-body{grid-template-columns:1fr;gap:6px}.project{padding-bottom:36px}.project+.project{padding-top:32px}.footer{flex-wrap:wrap}.trace{padding:16px}.project-header{margin-bottom:22px}th,td{padding:10px}.about{padding-top:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <a class="skip" href="#main">跳到主要内容</a>
+<a class="skip" href="#main">跳到项目内容</a>
+<aside class="sidebar" aria-label="作品集导航">
+<a class="name" href="#novel">化旧成花海</a><p class="role">AI 应用开发 /<br>Agent 开发</p>
+<nav class="directory" aria-label="项目目录"><p>项目档案</p><a class="folder" href="#novel" aria-current="location">novel-agent/</a><div class="tree"><a href="#novel">概览</a><a href="#implementation">实现</a><a href="#evaluation">验证</a></div><a class="folder" href="#opslattice">opslattice-agent/</a><a href="#about">关于我</a></nav>
+<div class="side-bottom"><a href="https://github.com/qigemingzizhemnanwoc" target="_blank" rel="noopener noreferrer">GitHub</a><p>2026</p></div>
+</aside>
+<main id="main" tabindex="-1"><div class="breadcrumb">作品集 / 项目档案</div>
+<article class="project" id="novel" aria-labelledby="novel-title"><header class="project-header"><h1 id="novel-title">小说管理 Agent</h1><p class="subtitle">长篇小说里的问题，回到原文里找答案。</p><div class="meta"><span class="stack">Python / JavaScript / DeepSeek</span><span>本地阅读与创作助手</span></div></header>
+<figure><p class="figure-label">阅读与引用问答 · 交互示意</p><div class="workbench"><div class="bench-nav" aria-hidden="true"><strong>小说管理</strong><span>我的作品</span><span class="selected">雨后的来信</span><br><span>阅读</span><span class="selected">问答</span><span>人物</span><span>创作</span></div><div class="reading"><h3>雨后的来信</h3><p>雨是在傍晚才停的。林晚回到书桌前，发现桌上多了一封没有署名的信。</p><p>她拆开信封，读到：</p><blockquote>“有些话，当面总是说不清楚，不如让它在雨停之后，慢慢地被你读到。”</blockquote></div><div class="answer"><h3>问答</h3><p class="question">这封信有没有署名？</p><p>没有。原文写到“发现桌上多了一封没有署名的信”。</p><p class="citation">引用来源<br>《雨后的来信》 · 示例片段</p></div></div><figcaption>为说明原文与回答的对应关系制作的静态示意；文本为虚构样例，非产品截图或真实模型运行记录。</figcaption></figure>
+<section class="record" id="implementation" aria-labelledby="implementation-title"><h3 id="implementation-title">我的实现</h3><div class="record-body"><p><strong>混合检索。</strong>关键词与向量候选经 RRF 融合、去重，并补充邻近原文。向量服务不可用时回退关键词检索。</p><p><strong>引用校验。</strong>核对引文、明确整数与已有角色卡姓名，保留回答并标出疑点，便于回到原文复核。</p><p><strong>阅读范围。</strong>人物提取与限定范围创作不复用全书向量索引；灵感和续写候选稿独立保存，保留作品原文。</p></div></section>
+<section class="record" id="evaluation" aria-labelledby="evaluation-title"><h3 id="evaluation-title">验证</h3><div class="record-body"><table><caption class="figure-label" style="text-align:left">真实作品检索评测</caption><thead><tr><th scope="col">方法</th><th scope="col">recall@5</th></tr></thead><tbody><tr><th scope="row">纯词频基线</th><td>31/50</td></tr><tr><th scope="row">现有关键词检索</th><td>32/50</td></tr><tr><th scope="row">混合检索实际入口</th><td>37/50</td></tr></tbody></table><p class="note">单部作品 · 445,355 字符 · 372 个片段 · 固定 50 道题。统计前 5 条直接命中；检索命中不等于最终回答准确率。依据本地项目 README 与 eval/report.json 的既有记录。</p><details><summary>实验取舍与使用边界</summary><p>扩大邻居窗口没有增加证据覆盖；增加返回数超出字符预算；前文前缀实验未通过验收，已关闭。保留失败实验，避免只呈现有利结果。</p><p>当前为本地单用户应用，使用远程模型与 embedding，并非完全离线。引用规则校验不等同于语义正确性判断；完整浏览器到模型回答的人工验收尚未完成。</p></details></div></section></article>
+<article class="project" id="opslattice" aria-labelledby="ops-title"><header class="project-header"><h2 id="ops-title">OpsLattice 数据 Agent</h2><p class="subtitle">在业务权限内，用自然语言查询库存与销售。</p><div class="meta"><span class="stack">Spring AI / DeepSeek / Spring Boot</span><span>基于开源项目二次开发</span></div></header>
+<div class="ops-body"><div class="narrative"><p>在企业运营系统中增加只读数据 Agent。模型根据问题选择库存不足、库存明细、按商品销售和销售概览四类工具，通过业务服务查询数据。</p><p>复用现有角色权限，校验会话归属；多轮查询沿用成功库存查询的商品 ID，失败查询不进入商品上下文。</p><p>记录工具参数、返回行数、耗时与执行状态。真实模型两轮验收覆盖“库存不足 → 这些商品的销售情况”，并用 SQL 对账核对结果。</p><p class="note">基于 <a href="https://github.com/shanqiu127/Collaborative-Operation-Management-System" target="_blank" rel="noopener noreferrer">shanqiu127 的原始项目</a>持续二次开发；Agent 仅查询，不修改业务数据。</p></div>
+<figure><div class="trace"><h3>真实调用记录 · 节选</h3><p>用户：哪些 Agent演示商品的库存不足？</p><pre><span class="call">queryLowStockGoods</span>
+{ "keyword": "Agent演示" }
 
-  <header class="site-head">
-    <div class="wrap head-in">
-      <a class="sig" href="#top">
-        <span class="sig-name">化旧成花海</span>
-        <span class="sig-handle">qigemingzizhemnanwoc</span>
-      </a>
-      <a class="gh" href="https://github.com/qigemingzizhemnanwoc" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
+返回 2 行 · 执行成功</pre><hr><p>用户：这些商品的销售情况怎么样？</p><pre><span class="call">queryGoodsSales</span>
+{ "goodsIds": [370, 371] }
 
-  <main id="main" tabindex="-1">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="wrap">
-        <h1 id="hero-title" style="font-size:clamp(2.8rem,8vw,6rem);line-height:1.12;letter-spacing:-.04em">让 AI 走进<br>具体的问题。</h1>
-        <p class="lede">从长篇小说的原文检索与创作辅助，<br>到企业运营中的业务查询与工程实践。</p>
-        <nav aria-label="项目导航" style="display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem">
-          <a class="inline-link" href="#novel">小说管理 Agent</a>
-          <a class="inline-link" href="#case">OpsLattice</a>
-        </nav>
-      </div>
-    </section>
-
-    <section class="case" id="novel" aria-labelledby="novel-title" style="border-bottom:1px solid var(--ink);scroll-margin-top:80px">
-      <div class="wrap">
-        <div class="case-head">
-          <div class="case-side">
-            <h2 id="novel-title" style="line-height:1.2">小说管理 Agent</h2>
-            <p style="margin:0">本地阅读与写作助手<br>Python · JavaScript · DeepSeek<br>关键词 / 向量混合检索</p>
-          </div>
-          <div class="case-copy">
-            <p class="intro">长篇阅读中，人物关系与情节细节散落在数十万字的原文里。这个项目把作品导入、阅读、带引用问答、人物资料和创作候选稿放进同一个工作台：让回答能回到原文核对，让创作以允许阅读的范围为依据。</p>
-          </div>
-        </div>
-        <div style="max-width:75ch">
-          <h3>从问题到原文，再到回答</h3>
-          <p>支持文本、Markdown、Word 和文本型 PDF。原文切块后，分别进行关键词与向量排序，通过 RRF 融合候选，去重并补充邻近原文，再交给 DeepSeek 生成回答。索引未就绪或向量服务故障时回退关键词检索。</p>
-          <h3>引用可追溯，疑点可核对</h3>
-          <p>保留模型回答，并对引用文字、明确整数和已有角色卡姓名做规则核对；疑点在页面标黄，提供折叠明细。校验用于辅助审阅，不等同于语义正确性判定。</p>
-          <h3>阅读进度也是创作边界</h3>
-          <p>人物提取和限定范围创作不复用全书向量索引，避免把未授权后文带入提示词。灵感与续写提示词可保存复用，候选稿独立保存，保留作品原文。</p>
-          <h3>用真实作品检验检索效果</h3>
-          <p>在一部约 44.5 万字、372 个片段的作品上，以固定 50 道题评测直接命中前 5 条的 recall@5：纯词频基线 <strong>31/50</strong>，现有关键词检索 <strong>32/50</strong>，混合检索实际入口 <strong>37/50</strong>。相较现有关键词检索净增 5 题。</p>
-          <p>这是单部作品的检索评测，不代表最终回答准确率。扩展邻居窗口未增加证据覆盖；增加返回数和加入前文前缀的实验也未通过既定验收，保留失败记录作为后续改进依据。</p>
-          <details>
-            <summary style="cursor:pointer;text-decoration:underline;text-underline-offset:4px">实现与使用边界</summary>
-            <p>Python 标准库 HTTP 服务与原生浏览器界面，本地单用户运行。远程 embedding 会发送作品片段，对话模型会接收检索原文与必要上下文，因此并非完全离线。扫描件 OCR 不在当前支持范围，完整浏览器到模型回答的人工验收尚未完成。</p>
-            <p>评测依据：项目 README.md、eval/report.json 与 T2 / T3 实验记录；功能依据：app.py、workspace.py、verify.py。此处展示项目能力与评测摘要，不提供在线模型体验。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="case" id="case" aria-labelledby="case-title">
-      <div class="wrap">
-        <div class="case-head">
-          <div class="case-side">
-            <div class="sec-label">
-              <span class="sec-num">01</span>
-              <span class="sec-en">Case</span>
-            </div>
-            <h2 id="case-title">OpsLattice</h2>
-            <p class="case-meta">企业运营管理系统<br>Java / Spring Boot / Vue 3<br>2026</p>
-          </div>
-          <div class="case-copy">
-            <p class="intro">OpsLattice 覆盖人员、采购、销售、退货与库存。我在原作者 <a class="inline-link" href="https://github.com/shanqiu127/Collaborative-Operation-Management-System" target="_blank" rel="noopener noreferrer">shanqiu127</a> 的项目上持续做二次开发，完善并发一致性、员工接口、防重复提交和容器化部署，并新增 Spring AI + DeepSeek 数据 Agent，让用户在现有权限内用自然语言查询库存与销售。</p>
-          </div>
-        </div>
-
-        <ol class="work">
-          <li>
-            <span class="work-num">01</span>
-            <div>
-              <h3>库存并发与事务一致性</h3>
-              <p>条件更新防超卖，行锁串行化退货额度，库存流水与业务同事务。</p>
-            </div>
-          </li>
-          <li>
-            <span class="work-num">02</span>
-            <div>
-              <h3>员工数据库与 API</h3>
-              <p>查询与历史修补分离，UNION ALL 分页，逻辑删除兼容唯一索引。</p>
-            </div>
-          </li>
-          <li>
-            <span class="work-num">03</span>
-            <div>
-              <h3>Redis 防重复提交</h3>
-              <p>SHA-256 指纹、用户 / 接口 / 参数隔离，有界本地降级。</p>
-            </div>
-          </li>
-          <li>
-            <span class="work-num">04</span>
-            <div>
-              <h3>Docker 与 CI</h3>
-              <p>四服务 Compose，健康依赖与持久化卷，GitHub Actions 构建测试。</p>
-            </div>
-          </li>
-          <li>
-            <span class="work-num">05</span>
-            <div>
-              <h3>只读数据 Agent</h3>
-              <p>Spring AI + DeepSeek，由模型自主选择库存不足、库存明细、按商品销售、销售概览四类工具；复用现有业务权限，只查询、不修改业务数据。</p>
-            </div>
-          </li>
-          <li>
-            <span class="work-num">06</span>
-            <div>
-              <h3>多轮上下文与调用追溯</h3>
-              <p>从“哪些商品库存不足”追问“这些商品卖得怎么样”，复用成功库存查询中的商品 ID。记录工具参数、行数、耗时与成功状态，失败查询不进入商品上下文。</p>
-            </div>
-          </li>
-        </ol>
-        <p>数据 Agent 与原有项目知识问答并行：一个查库存与销售，一个回答流程与规则。完整体验需本地配置模型密钥。</p>
-        <p><a class="inline-link" href="https://github.com/qigemingzizhemnanwoc/OpsLattice/blob/main/docs/verification/agent-acceptance.md" target="_blank" rel="noopener noreferrer">查看 Agent 验收记录：两轮真实模型调用、工具轨迹与 SQL 对账 ↗</a></p>
-
-        <div class="evidence">
-          <figure class="diagram" id="architecture">
-            <svg class="diagram-wide" viewBox="0 0 824 246" role="img" aria-labelledby="arch-title-wide">
-              <title id="arch-title-wide">OpsLattice 系统架构</title>
-              <desc>浏览器经 Nginx 访问 Spring Boot，再读写 MySQL；防重复提交 AOP 使用 Redis。</desc>
-              <defs>
-                <marker id="arrow-w" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path d="M0 0 L10 5 L0 10 Z" fill="#D6402A"></path>
-                </marker>
-              </defs>
-              <g fill="#F7F5F0" stroke="#111" stroke-width="1.5">
-                <rect x="0" y="26" width="140" height="62"></rect>
-                <rect x="190" y="26" width="150" height="62"></rect>
-                <rect x="390" y="26" width="210" height="62"></rect>
-                <rect x="650" y="26" width="170" height="62"></rect>
-                <rect x="390" y="158" width="210" height="62"></rect>
-                <rect x="650" y="158" width="170" height="62"></rect>
-              </g>
-              <g class="arrow" marker-end="url(#arrow-w)">
-                <line x1="140" y1="57" x2="184" y2="57"></line>
-                <line x1="340" y1="57" x2="384" y2="57"></line>
-                <line x1="600" y1="57" x2="644" y2="57"></line>
-                <line x1="495" y1="88" x2="495" y2="152"></line>
-                <line x1="600" y1="189" x2="644" y2="189"></line>
-              </g>
-              <g text-anchor="middle">
-                <text class="t" x="70" y="56">浏览器</text>
-                <text class="s" x="70" y="74">Browser</text>
-                <text class="t" x="265" y="56">Nginx</text>
-                <text class="s" x="265" y="74">静态资源 / 反向代理</text>
-                <text class="t" x="495" y="56">Spring Boot 3</text>
-                <text class="s" x="495" y="74">Sa-Token / 业务 Service</text>
-                <text class="t" x="735" y="56">MySQL 8</text>
-                <text class="s" x="735" y="74">事务边界</text>
-                <text class="t" x="495" y="188">防重复提交 AOP</text>
-                <text class="s" x="495" y="206">SHA-256 指纹</text>
-                <text class="t" x="735" y="188">Redis</text>
-                <text class="s" x="735" y="206">SET NX + TTL</text>
-              </g>
-            </svg>
-
-            <svg class="diagram-narrow" viewBox="0 0 340 244" role="img" aria-labelledby="arch-title-narrow">
-              <title id="arch-title-narrow">OpsLattice 系统架构</title>
-              <desc>浏览器经 Nginx 访问 Spring Boot，再读写 MySQL；防重复提交 AOP 使用 Redis。</desc>
-              <defs>
-                <marker id="arrow-n" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                  <path d="M0 0 L10 5 L0 10 Z" fill="#D6402A"></path>
-                </marker>
-              </defs>
-              <g fill="#F7F5F0" stroke="#111" stroke-width="1.5">
-                <rect x="0" y="0" width="150" height="48"></rect>
-                <rect x="0" y="64" width="150" height="48"></rect>
-                <rect x="0" y="128" width="150" height="48"></rect>
-                <rect x="190" y="128" width="150" height="48"></rect>
-                <rect x="0" y="192" width="150" height="48"></rect>
-                <rect x="190" y="192" width="150" height="48"></rect>
-              </g>
-              <g class="arrow" marker-end="url(#arrow-n)">
-                <line x1="75" y1="48" x2="75" y2="60"></line>
-                <line x1="75" y1="112" x2="75" y2="124"></line>
-                <line x1="75" y1="176" x2="75" y2="188"></line>
-                <line x1="150" y1="152" x2="186" y2="152"></line>
-                <line x1="265" y1="176" x2="265" y2="188"></line>
-              </g>
-              <g text-anchor="middle">
-                <text class="tn" x="75" y="27">浏览器</text>
-                <text class="sn" x="75" y="41">Browser</text>
-                <text class="tn" x="75" y="91">Nginx</text>
-                <text class="sn" x="75" y="105">静态资源 / 反向代理</text>
-                <text class="tn" x="75" y="155">Spring Boot 3</text>
-                <text class="sn" x="75" y="169">Sa-Token / Service</text>
-                <text class="tn" x="265" y="155">防重复提交 AOP</text>
-                <text class="sn" x="265" y="169">SHA-256 指纹</text>
-                <text class="tn" x="75" y="219">MySQL 8</text>
-                <text class="sn" x="75" y="233">事务边界</text>
-                <text class="tn" x="265" y="219">Redis</text>
-                <text class="sn" x="265" y="233">SET NX + TTL</text>
-              </g>
-            </svg>
-            <figcaption>业务基础架构 · 浏览器到数据层的调用路径；Agent 通过 Spring AI 调用 DeepSeek，经权限校验查询业务数据</figcaption>
-          </figure>
-
-          <div class="proof" id="metrics" role="group" aria-label="项目指标">
-            <p class="proof-kicker">验证</p>
-            <p class="proof-num">76</p>
-            <p class="proof-label">项 JUnit 测试通过<br><strong>2026-11-11 验收记录</strong></p>
-            <div class="proof-facts">
-              <div><span>Agent 测试</span><span>32 项 / 5 类</span></div>
-              <div><span>容器服务</span><span>4 个</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-foot">
-    <div class="wrap foot-in">
-      <p class="foot-name">化旧成花海 <span class="foot-handle">/ qigemingzizhemnanwoc</span></p>
-      <p class="foot-links"><a href="https://github.com/qigemingzizhemnanwoc" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
-      <p class="foot-note">纯静态页面 · 无第三方请求</p>
-    </div>
-  </footer>
-</body>
-</html>
+返回 2 行 · 执行成功</pre><p>第二轮复用第一轮商品 ID，销售结果与 SQL 对账一致。</p></div><figcaption>2026-11-09 验收记录；测试库演示数据。为方便阅读整理，完整参数与结果见原始记录。</figcaption></figure></div>
+<div class="project-links"><a href="https://github.com/qigemingzizhemnanwoc/OpsLattice" target="_blank" rel="noopener noreferrer">查看项目源码</a><a href="https://github.com/qigemingzizhemnanwoc/OpsLattice/blob/main/docs/verification/agent-acceptance.md" target="_blank" rel="noopener noreferrer">查看真实模型验收与 SQL 对账</a></div>
+<section class="record"><h3>工程支撑</h3><div class="record-body"><p>条件更新防超卖，库存流水与业务同事务；Redis 防重复提交与有界本地降级；Docker Compose 部署与 GitHub Actions 构建测试。</p></div></section></article>
+<section class="about" id="about"><h2>关于我</h2><p>求职方向：AI 应用开发 / Agent 开发。关注模型与实际产品的连接：从检索和工具调用，到权限、上下文与结果验证。</p><div class="project-links"><a href="https://github.com/qigemingzizhemnanwoc" target="_blank" rel="noopener noreferrer">在 GitHub 查看我的项目</a></div></section>
+<footer class="footer"><span>化旧成花海</span><span>项目档案 / 2026</span></footer></main>
+<script>
+const folders=[...document.querySelectorAll('.folder')];
+const sections=[...document.querySelectorAll('.project')];
+function updateDirectory(){const active=sections.filter(s=>s.getBoundingClientRect().top<=160).at(-1)||sections[0];for(const link of folders){if(link.hash==='#'+active.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')}}
+addEventListener('scroll',updateDirectory,{passive:true});updateDirectory();
+</script>
+</body></html>
